@@ -1,13 +1,16 @@
 import React from 'react';
 
+import { LucideProps } from 'lucide-react';
+
 interface InputFieldProps {
   name: string;
   placeholder: string;
   type: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  Icon?: React.ComponentType<{ size: number; className: string }>; // Optional icon prop
+  Icon?: React.ComponentType<LucideProps>; // Match Lucide icon props
 }
+
 
 export const InputField: React.FC<InputFieldProps> = ({ name, placeholder, type, value, onChange, Icon }) => {
   return (
