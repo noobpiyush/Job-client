@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { User, Phone, Building2, Mail, Lock } from "lucide-react";
 import { InputField } from "../components/Input";
 import { SignupBody, VeVerificationBody } from "../zodSchemas";
-import { UserUrl } from "../GlobalApi";
 import { Link, useNavigate } from "react-router-dom";
 
 export const SignUpForm = () => {
