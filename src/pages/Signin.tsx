@@ -36,7 +36,7 @@ export const Signin = () => {
       setErrors({});
       try {
         const response = await fetch(
-          `http://localhost:3000/api/v1/user/signin`, // Change to signin endpoint
+          `https://job-board-api-d0e1.onrender.com/api/v1/user/signin`, // Change to signin endpoint
           {
             method: "POST",
             headers: {

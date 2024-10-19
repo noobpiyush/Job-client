@@ -73,7 +73,7 @@ const JobForm: React.FC = () => {
           return;
         }
 
-        const response = await fetch("http://localhost:3000/api/v1/job/post", {
+        const response = await fetch("https://job-board-api-d0e1.onrender.com/api/v1/job/post", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,

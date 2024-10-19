@@ -44,7 +44,7 @@ export const SignUpForm = () => {
     } else {
       setErrors({});
       try {
-        const response = await fetch(`http://localhost:3000/api/v1/user/signup`, {
+        const response = await fetch(`https://job-board-api-d0e1.onrender.com/api/v1/user/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
