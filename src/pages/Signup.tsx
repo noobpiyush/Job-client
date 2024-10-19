@@ -102,7 +102,7 @@ export const SignUpForm = () => {
     } else {
       setOtpError("");
       try {
-        const response = await fetch(`${UserUrl}/verify`, {
+        const response = await fetch(`https://job-board-api-d0e1.onrender.com/api/v1/user/verify`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
