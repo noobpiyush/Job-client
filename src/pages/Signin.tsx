@@ -3,6 +3,7 @@ import { Mail, Lock } from "lucide-react";
 import { InputField } from "../components/Input";
 import { SigninBody } from "../zodSchemas";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Signin = () => {
   const [formData, setFormData] = useState({
@@ -101,9 +102,8 @@ export const Signin = () => {
           )}
         </div>
 
-        <p className="text-xs text-gray-600 mt-4 mb-4">
-          Already a user
-          <a href="/signin">Signin</a>
+        <p className="text-xs text-gray-600 mt-4 mb-4 gap-3">
+          <Link  to="/"> Signin</Link>
         </p>
 
         <button

@@ -3,7 +3,7 @@ import { User, Phone, Building2, Mail, Lock } from "lucide-react";
 import { InputField } from "../components/Input";
 import { SignupBody, VeVerificationBody } from "../zodSchemas";
 import { UserUrl } from "../GlobalApi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const SignUpForm = () => {
   const [formData, setFormData] = useState({
@@ -44,13 +44,16 @@ export const SignUpForm = () => {
     } else {
       setErrors({});
       try {
-        const response = await fetch(`https://job-board-api-d0e1.onrender.com/api/v1/user/signup`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          `https://job-board-api-d0e1.onrender.com/api/v1/user/signup`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         console.log("req sent to ");
 
@@ -75,9 +78,9 @@ export const SignUpForm = () => {
     const value = e.target.value;
     setOTP(value);
     console.log(value);
-    
+
     console.log(setOTP);
-    
+
     if (value.length !== 4) {
       setOtpError("OTP must be 4 digits");
     } else {
@@ -198,9 +201,8 @@ export const SignUpForm = () => {
               Terms & Conditions
             </a>
           </p>
-          <p className="text-xs text-gray-600 mt-4 mb-4">
-            Already a user
-            <a href="/signin">Signin</a>
+          <p className="text-xs text-gray-600 mt-4 mb-4 gap-3">
+            <Link to="/signin"> Signup</Link>
           </p>
           <button
             type="submit"
